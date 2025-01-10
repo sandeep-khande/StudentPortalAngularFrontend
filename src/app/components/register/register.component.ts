@@ -45,7 +45,7 @@ export class RegisterComponent {
         this.loading = false;
 
         // Redirect to login page after successful registration
-        this.router.navigate(['/login']);
+        // this.router.navigate(['/login']);
       },
       error => {
         console.error('Registration Failed:', error);

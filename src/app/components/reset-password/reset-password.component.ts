@@ -19,13 +19,13 @@ export class ResetPasswordComponent {
 
   constructor(private studentService: StudentService, private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
+   ngOnInit(): void {
     // Extract the token from the query parameters
     this.token = this.route.snapshot.queryParamMap.get('token');
   }
 
    // Request reset link
-  onGenerateResetLink() {
+   onGenerateResetLink() {
     if (!this.email) {
       Swal.fire('Validation Error', 'Please enter your email address.', 'warning');
       return;
@@ -77,6 +77,11 @@ export class ResetPasswordComponent {
           this.loading = false;
         }
       );
+  }
+
+  private getTokenFromUrl(): string | null {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('token');
   }
 
 

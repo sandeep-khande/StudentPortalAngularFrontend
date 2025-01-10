@@ -43,6 +43,10 @@ export class StudentService {
   }
   
   resetPassword(resetDto: { token: string; password: string }): Observable<any> {
+    const payload = {
+      ResetToken: resetDto.token, // Match backend property name
+      Password: resetDto.password, // Match backend property name
+    };
     return this.http.put(`${this.baseUrl}/reset-password`, resetDto, {
       headers: { 'Content-Type': 'application/json' },
     });
