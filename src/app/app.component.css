@@ -1,0 +1,26 @@
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow */
+    padding: 10px 0;
+    /* Adjusts the spacing */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.8rem;
+    /* Makes the text larger */
+    color: #ffffff !important;
+    /* Ensures the text color is white */
+    letter-spacing: 1px;
+    /* Adds some spacing between letters */
+}
+
+.navbar .navbar-brand:hover {
+    text-decoration: underline;
+    /* Adds an underline on hover */
+}
+
+/* Add top padding to avoid overlap with the fixed navbar */
+.content {
+    padding-top: 70px;
+    /* Adjust this value based on the height of your navbar */
+}
